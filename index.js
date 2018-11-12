@@ -2,7 +2,7 @@ const http = require('http');
 const url = require('url');
 const querystring = require('querystring');
 
-const PORT = process.env.port || 8080;
+const PORT = process.env.PORT || 8080;
 
 var server = http.createServer(function(req, res){
 	var page = url.parse(req.url);
@@ -20,6 +20,6 @@ var server = http.createServer(function(req, res){
 	}
 	res.end();
 });
-console.log('listening on port: '+PORT);
+console.log('listening on port: ${PORT}');
 server.listen(PORT);
 
